@@ -1,0 +1,12 @@
+**/WEB-INF/classes
+**/.settings/*
+**/.classpath
+**/.project
+/build/
+**/.DS_Store
+**/.tern-project
+**/*.MF
+**/*log*
+**/deploy
+WebRoot/attached/
+build.xml
