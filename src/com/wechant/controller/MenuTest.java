@@ -20,45 +20,9 @@ import com.google.gson.Gson;
 public class MenuTest {
 
 	public static void main(String[] args) {
-		StringBuilder sb = new StringBuilder();
-		sb.append("{");
-		sb.append("\"button\": [");
-		sb.append("{");
-		sb.append("\"type\": \"click\","); 
-		sb.append("\"name\": \"今日歌曲\","); 
-		sb.append("\"key\": \"V1001_TODAY_MUSIC\"");
-		sb.append("},"); 
-		sb.append("{");
-		sb.append("\"type\": \"click\","); 
-		sb.append("\"name\": \"歌手简介\","); 
-		sb.append("\"key\": \"V1001_TODAY_SINGER\"");
-		sb.append("},"); 
-		sb.append("{");
-		sb.append("\"name\": \"菜单\","); 
-		sb.append("\"sub_button\": [");
-		sb.append("{");
-		sb.append("\"type\": \"view\","); 
-		sb.append("\"name\": \"搜索\","); 
-		sb.append("\"url\": \"http://www.soso.com/\"");
-		sb.append("},"); 
-		sb.append("{");
-		sb.append("\"type\": \"view\","); 
-		sb.append("\"name\": \"视频\","); 
-		sb.append("\"url\": \"http://v.qq.com/\"");
-		sb.append("},"); 
-		sb.append("{");
-		sb.append("\"type\": \"click\","); 
-		sb.append("\"name\": \"赞一下我们\","); 
-		sb.append("\"key\": \"V1001_GOOD\"");
-		sb.append("}");
-		sb.append("]");
-		sb.append("}");
-		sb.append("]");
-		sb.append("}");
 		
-		
-		String menuUrl = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=";
 		String accessTokeUrl = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx625d6cbd1b3d6390&secret=f56facab1a70fbc1f46df7aaf0f48444";
+		String menuUrl = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=";
 		
 		HttpGet request = new HttpGet(accessTokeUrl);
 		String result = "";
@@ -121,7 +85,6 @@ public class MenuTest {
 		
 		
 		HttpPost httpPost = new HttpPost(menuUrl+access_token);
-		JSONObject postData = new JSONObject();
 		
 		
 		Gson gson = new Gson();
