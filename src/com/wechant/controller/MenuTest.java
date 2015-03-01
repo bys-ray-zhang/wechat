@@ -62,6 +62,12 @@ public class MenuTest {
 		menuItem.setKey("V1001_TODAY_MUSIC");
 		menuitems.add(menuItem);
 		
+		menuItem = new MenuItem();
+		menuItem.setType("click");
+		menuItem.setName("歌手简介");
+		menuItem.setKey("V1001_TODAY_SINGER");
+		menuitems.add(menuItem);
+		
 		MenuItem menuItem0 = new MenuItem();
 		menuItem0.setName("菜单");
 		menuitems.add(menuItem0);
@@ -74,8 +80,8 @@ public class MenuTest {
 		submenuitems.add(menuItem);
 		menuItem = new MenuItem();
 		menuItem.setType("view");
-		menuItem.setName("QQ");
-		menuItem.setUrl("http://www.qq.com");
+		menuItem.setName("我的微信");
+		menuItem.setUrl("http://120.24.225.227/wechat/wechat.html");
 		submenuitems.add(menuItem);
 		menuItem0.setSub_button(submenuitems);
 		

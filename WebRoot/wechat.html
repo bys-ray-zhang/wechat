@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="APP">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body ng-controller="testCtrl">
 
-	hello, Ray.
+	Hello {{World}}!
 
 </body>
+
+<script src="./vendor/jquery/jquery-1.10.2.js"></script>
+<script src="./vendor/angular/angular.js"></script>
+
+<script type="text/javascript">
+
+	var APP = angular.module('APP', []);
+	APP.controller('testCtrl', function($scope){
+		$scope.World = 'ray';
+	});
+
+</script>
+
 </html>
